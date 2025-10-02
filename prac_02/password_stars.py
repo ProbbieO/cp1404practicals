@@ -1,18 +1,18 @@
 """
-Program to get a password with error-checking and print stars as long as the password.
+Program to get a password and print.
 """
 
 MIN_LENGTH = 5
 
 
 def main():
-    """Get password and print asterisks for its length."""
+    """Get password and print asterisks"""
     password = get_password(MIN_LENGTH)
     print_asterisks(password)
 
 
 def get_password(min_length):
-    """Get a valid password with at least min_length characters."""
+    """Get password"""
     password = input("Enter password: ")
     while len(password) < min_length:
         print(f"Password too short. Must be at least {min_length} characters.")

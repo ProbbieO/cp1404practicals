@@ -1,40 +1,53 @@
 """
-Temperature conversion program using functions.
+Menu-driven program for scores.
 """
 
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
+import random
 
 
 def main():
-    """Run menu-driven temperature conversion program."""
+    """program to get score, print result, show status"""
+    score = get_valid_score()
+
+    MENU = """(G)et a valid score
+(P)rint result
+(S)how stars
+(Q)uit"""
     print(MENU)
     choice = input(">>> ").upper()
+
     while choice != "Q":
-        if choice == "C":
-            celsius = float(input("Celsius: "))
-            fahrenheit = celsius_to_fahrenheit(celsius)
-            print(f"Result: {fahrenheit:.2f} F")
-        elif choice == "F":
-            fahrenheit = float(input("Fahrenheit: "))
-            celsius = fahrenheit_to_celsius(fahrenheit)
-            print(f"Result: {celsius:.2f} C")
+        if choice == "G":
+            score = get_valid_score()
+        elif choice == "P":
+            print(get_score_result(score))
+        elif choice == "S":
+            print("*" * int(score))
         else:
-            print("Invalid option")
+            print("Invalid choice")
         print(MENU)
         choice = input(">>> ").upper()
-    print("Thank you.")
+
+    print("Farewell.")
 
 
-def celsius_to_fahrenheit(celsius):
-    """Convert Celsius to Fahrenheit."""
-    return celsius * 9.0 / 5 + 32
+def get_valid_score():
+    """Get a score between 0 and 100 """
+    score = float(input("Enter score: "))
+    while score < 0 or score > 100:
+        print("Invalid score")
+        score = float(input("Enter score: "))
+    return score
 
 
-def fahrenheit_to_celsius(fahrenheit):
-    """Convert Fahrenheit to Celsius."""
-    return 5 / 9 * (fahrenheit - 32)
+def get_score_result(score):
+    """Return result based on score"""
+    if score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
 
 
 main()

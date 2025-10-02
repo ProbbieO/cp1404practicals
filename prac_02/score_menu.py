@@ -32,7 +32,7 @@ def main():
 
 
 def get_valid_score():
-    """Get a valid score between 0 and 100 inclusive."""
+    """Get a valid score between 0 and 100 """
     score = float(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")
@@ -41,7 +41,7 @@ def get_valid_score():
 
 
 def get_score_result(score):
-    """Return result string based on score."""
+    """Return result based on score."""
     if score >= 90:
         return "Excellent"
     elif score >= 50:

@@ -1,5 +1,5 @@
 """
-Temperature conversion program using functions.
+Temperature conversion program using functions
 """
 
 MENU = """C - Convert Celsius to Fahrenheit
@@ -8,7 +8,7 @@ Q - Quit"""
 
 
 def main():
-    """Run menu-driven temperature conversion program."""
+    """ temperature conversion program"""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
@@ -28,12 +28,12 @@ def main():
 
 
 def celsius_to_fahrenheit(celsius):
-    """Convert Celsius to Fahrenheit."""
+    """Convert Celsius to Fahrenheit"""
     return celsius * 9.0 / 5 + 32
 
 
 def fahrenheit_to_celsius(fahrenheit):
-    """Convert Fahrenheit to Celsius."""
+    """Convert Fahrenheit to Celsius"""
     return 5 / 9 * (fahrenheit - 32)
 
 
