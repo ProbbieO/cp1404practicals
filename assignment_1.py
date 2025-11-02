@@ -2,7 +2,7 @@
 CP1404 Assignment 1 - Books to Read
 Name: Paul Omuyoma
 Date Started: 22/10/25
-GitHub URL:
+GitHub URL:https://github.com/ProbbieO/cp1404practicals/tree/assignment1_books
 """
 
 FILENAME = "books.csv"
