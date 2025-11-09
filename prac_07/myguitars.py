@@ -1,14 +1,14 @@
 """
-CP1404/CP5632 Practical
+CP1404
 Guitar objects program - read, display, sort, add, and save guitars
 """
 
-from prac_07.guitar import Guitar
+from guitar import Guitar
 
 
 def main():
     """Read guitars from file, sort, display, get user input, and save."""
-    guitars = load_guitars("prac_07/guitars.csv")
+    guitars = load_guitars("guitars.csv")
     print_guitars(guitars)
 
     guitars.sort()
@@ -16,7 +16,7 @@ def main():
     print_guitars(guitars)
 
     add_new_guitars(guitars)
-    save_guitars("prac_07/guitars.csv", guitars)
+    save_guitars("guitars.csv", guitars)
 
 
 def load_guitars(filename):
