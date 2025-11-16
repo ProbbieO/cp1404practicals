@@ -1,6 +1,6 @@
 """
-CP1404 Practical - BoxLayout Demo Modified
-Greeter App with Clear and Greet buttons
+CP1404 - Practical08
+Clear and Greet buttons
 """
 
 from kivy.app import App

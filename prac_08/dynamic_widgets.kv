@@ -1,17 +1,17 @@
 BoxLayout:
     orientation: 'vertical'
-    padding: 10
-    spacing: 10
 
     BoxLayout:
         orientation: 'vertical'
         id: entries_box
-        spacing: 5
+
+    Label:
+        size_hint_y: 0.1
+        text: app.status_text
 
     BoxLayout:
         orientation: 'horizontal'
         size_hint_y: 0.2
-        spacing: 10
 
         Button:
             text: "Create Widgets"
