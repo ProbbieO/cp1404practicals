@@ -10,7 +10,7 @@ from kivy.properties import StringProperty
 MILES_TO_KM = 1.60934
 
 
-class MilesToKilometresApp(App):
+class MilesToKilometresApp(App):s
     """Convert miles to kilometres using Kivy."""
     output_km = StringProperty("0.0")
 
